@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>HTML5 Form</title>
+    </head>
+<body>
+    <h1>HTML5 Form</h1>
+
+    <form accept="/submit" method="post">
+        <fieldset>
+            <legend>Email</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" aria-label="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Enter your email" required>
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form accept="/submit" method="post">
+        <fieldset>
+            <legend>Quantity</legend>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" aria-label="quantity" min="0" max="99" step="1" placeholder="Enter a quantity">
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form accept="/submit" method="post">
+        <fieldset>
+            <legend>Date</legend>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" aria-label="date" min="2024-01-01" max="2024-12-31" placeholder="Select a date">
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form accept="/submit" method="post">
+        <fieldset>
+            <legend>Rating</legend>
+            <label for="rating">Rating:</label>
+            <input type="range" id="rating" name="rating" aria-label="rating" min="1" max="5" step="1" value="1" placeholder="Select a rating" oninput="document.getElementById('rangeValue').textContent = this.value">
+            <span id="rangeValue" class="range-output">1</span>
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+<!-- Task 1: Creating a Selection Experience -->
+    <form accept="/submit" method="post">
+        <fieldset>
+            <legend>My Favorite Programming Language</legend>
+            <label for="programming-language">Programming Language:</label>
+            <select id="programming-language" name="programming-language" aria-label="programming-language" required>
+                <option value="python">Python</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">Javascript</option>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form accept="/submit" method="post">
+        <fieldset>
+            <legend>My Level of Expertise</legend>
+            <label>Level of Expertise:</label>
+            <input type="radio" id="beginner" name="expertise" aria-label="beginner" value="expertise" required>
+            <label for="beginner">Beginner</label>
+            <input type="radio" id="intermediate" name="expertise" aria-label="intermediate" value="expertise" required>
+            <label for="intermediate">Intermediate</label>
+            <input type="radio" id="advanced" name="expertise" aria-label="advanced" value="expertise" required>
+            <label for="advanced">Advanced</label>
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form accept="/submit" method="post">
+        <fieldset>
+            <legend>My Preferred Platforms</legend>
+            <label>Platforms:</label>
+            <input type="checkbox" id="web" name="platform" aria-label="web" value="web">
+            <label for="web">Web</label>
+            <input type="checkbox" id="mobile" name="platform" aria-label="mobile" value="mobile">
+            <label for="mobile">Mobile</label>
+            <input type="checkbox" id="desktop" name="platform" aria-label="desktop" value="desktop">
+            <label for="desktop">Desktop</label>
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
